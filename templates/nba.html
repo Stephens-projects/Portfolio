@@ -1,0 +1,19 @@
+{%extends "layout.html"%}
+{%block content%}
+<div class="nba">
+        <h1>NBA Efficiency Predicter</h1>
+        <p>This is my capstone project for my MS in Data Science Program at Eastern University.</p>
+        <p>To use the NBA Efficiency Predicter, input numeric values of your choice for the independent variables for an NBA player.</p>
+        <p>After clicking Submit, the model will return a prediction for the NBA player's efficiency.</p>
+</div>
+<div class="userinput">
+    <h2 style="color:rgb(14, 14, 14)">Field Goal Attemps and Points Input</h2>
+    <form action="{{url_for('predict')}}", method="post">
+        <input type="text" name="Field Goals Made" placeholder="Field Goals (FG)" required="required" />
+        <input type="text" name="Field Goal Attempts" placeholder="Field Goals Attempted (FGA)" required="required" />
+        <input type="text" name="Free Throws Made" placeholder="Free Throws Made (FT)" required="required" />
+        <input type="text" name="Free Throw Attempts" placeholder="Free Throws Attempted (FTA)" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict NBA Player Efficiency</button>
+    </form>
+</div>
+{%endblock%}

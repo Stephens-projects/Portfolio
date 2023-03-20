@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <header>
+            <title>Stephen Switchenko's Website</title>
+            <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}"
+            <div class="container">
+                <h1 class="logo">Stephen Switchenko</h1>
+                <strong><nav>
+                    <ul class="menu">
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('resume') }}">Resume</a></li>
+                        <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                        <li><a href="{{ url_for('nba') }}">NBA Efficiency Predicter</a></li>
+                    </ul>
+                </nav></strong>
+            </div>
+        </header>
+        <div class="container">
+            {%block content%}
+            {%endblock%}
+        </div>
+    </body>
+</html>
