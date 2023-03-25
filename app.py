@@ -4,7 +4,7 @@ import pickle
 
 app=Flask(__name__)
 
-model = pickle.load(open('models/grid_lasso.pkl', 'rb'))
+model = pickle.load(open('models/grid.pkl', 'rb'))
 
 @app.route('/')
 def home():
